@@ -143,8 +143,3 @@ src/
 
 هذا المشروع مرخص تحت رخصة MIT.
 
-## الدعم
-
-للدعم والاستفسارات، يرجى التواصل عبر:
-- البريد الإلكتروني: [your-email@example.com]
-- GitHub Issues: [repository-issues-url] 
