@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "81f4a2d8-3797-4728-86fe-c7d642a4bdc1",
+		"name": "IN_Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39581037"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "createUserByAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Super eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njk5ZWJmNTkxYmQ0NmQxNzFlODE5YyIsInJvbGUiOiJzdXBlcmFkbWluIiwiZW1haWwiOiJuYWJpbGFkZWwwNTJAZ21haWwuY29tIiwiaWF0IjoxNzUxNzU0OTkyfQ.mqry8Pb8Yj-IpAwHAcUHp4719W7QGpFnaN6BgkzOqTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ahmed nabil\",\r\n    \"email\": \"sn2dac@gmail.com\",\r\n    \"password\": \"223311\",\r\n    \"Cpassword\":\"223311\", \r\n    \"phone\": \"01272862469\",\r\n    \"address\": \"in home\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/createUserByAdmin",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"createUserByAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"n2@gmail.com\",\r\n    \"password\": \"223311\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/login",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/GetProfile",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"GetProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"youssef\",\r\n    \"phone\": \"01272862469\",\r\n    \"address\": \"Adwlfddf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/UpdateProfile",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Super eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njk5ZWJmNTkxYmQ0NmQxNzFlODE5YyIsInJvbGUiOiJzdXBlcmFkbWluIiwiZW1haWwiOiJuYWJpbGFkZWwwNTJAZ21haWwuY29tIiwiaWF0IjoxNzUxNzU0OTkyfQ.mqry8Pb8Yj-IpAwHAcUHp4719W7QGpFnaN6BgkzOqTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"oldPassword\" : \"223311\",\r\n \"newPassword\": \"Aa112233\",\r\n \"CnewPassword\":\"Aa112233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/UpdatePassword/6869aa07182647c247c7732c",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"UpdatePassword",
+								"6869aa07182647c247c7732c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "freeze uaser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Super eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njk5ZWJmNTkxYmQ0NmQxNzFlODE5YyIsInJvbGUiOiJzdXBlcmFkbWluIiwiZW1haWwiOiJuYWJpbGFkZWwwNTJAZ21haWwuY29tIiwiaWF0IjoxNzUxNzU0OTkyfQ.mqry8Pb8Yj-IpAwHAcUHp4719W7QGpFnaN6BgkzOqTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/users/FreazUser/6869aa07182647c247c7732c",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"FreazUser",
+								"6869aa07182647c247c7732c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "creat Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"realmi\",\r\n    \"storename\": \"Amazon\",\r\n    \"productLink\": \"https://excalidraw.com/\",\r\n    \"affiliateLink\": \"https://excalidraw.com/\",\r\n    \"description\": \"sssssssssss\",\r\n    \"price\": \"200\",\r\n    \"quantity\": \"10\",\r\n    \"commission\": \"10\",\r\n      \"adSpendingHistory\": [\r\n        {\r\n            \"price\": \"200\",\r\n            \"platform\": \"facepok\",\r\n            \"notes\": \"hi\"\r\n        },\r\n        {\r\n            \"price\": \"200\",\r\n            \"platform\": \"tictok\",\r\n            \"notes\": \"hi\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/products/addProduct",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"products",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone y\",\r\n    \"storename\": \"Amaxon\",\r\n    \"quantitySold\" :\"8\",\r\n    \"price\": \"300\",\r\n    \"quantity\": \"22\",\r\n    \"commission\": \"11\",\r\n    \"adSpendingHistory\": [\r\n        {\r\n            \"price\": \"200000\",\r\n            \"platform\": \"tiktok\",\r\n            \"notes\": \"لا يوجد\"\r\n        },\r\n        {\r\n            \"price\": \"200\",\r\n            \"platform\": \"tictok\",\r\n            \"notes\": \"ننن\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/products/updateProduct/686d390523b26fcddc6fa899",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"products",
+								"updateProduct",
+								"686d390523b26fcddc6fa899"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/products/getProducts",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"products",
+								"getProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjlhOTJjMTgyNjQ3YzI0N2M3NzMyNyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzUxOTg3ODMzfQ.Q38m8LKvMTVMX8iHyeqpr3KLcBfnUni1-r_JL8ZDd1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/products/getOneProduct/686d390523b26fcddc6fa899",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"getOneProduct",
+								"686d390523b26fcddc6fa899"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Super eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njk5ZWJmNTkxYmQ0NmQxNzFlODE5YyIsInJvbGUiOiJzdXBlcmFkbWluIiwiZW1haWwiOiJuYWJpbGFkZWwwNTJAZ21haWwuY29tIiwiaWF0IjoxNzUxNzU0OTkyfQ.mqry8Pb8Yj-IpAwHAcUHp4719W7QGpFnaN6BgkzOqTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/products/deleteProduct/686d390523b26fcddc6fa899",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"products",
+								"deleteProduct",
+								"686d390523b26fcddc6fa899"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exportProductsToExcel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTMyY2FiNzc3NmJlODdmM2FiNmUxYyIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRlMjgyQGdtYWlsLmNvbSIsImlhdCI6MTc1MDI4MTM5MH0.gEjOS7m2kikCZhLwsopHsVVZar4pZItQJNd1J_MDZ68",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://in-home-eight.vercel.app/products/exportProductsToExcel",
+							"protocol": "https",
+							"host": [
+								"in-home-eight",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"products",
+								"exportProductsToExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
