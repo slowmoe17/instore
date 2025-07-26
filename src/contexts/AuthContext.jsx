@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  axios.defaults.baseURL = 'https://in-home-eight.vercel.app';
+  axios.defaults.baseURL = 'https://in-home.onrender.com';
 
   // Robust Axios interceptor for correct authorization header
   axios.interceptors.request.use((config) => {

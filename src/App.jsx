@@ -5,6 +5,8 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
+import Profile from './pages/Profile';
+import CreateUser from './pages/CreateUser';
 import Layout from './components/Layout';
 
 const Spinner = () => (
@@ -17,6 +19,12 @@ const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) return <Spinner />;
   return user ? children : <Navigate to="/login" />;
+};
+
+const SuperAdminRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+  if (loading) return <Spinner />;
+  return user && user.role === 'superadmin' ? children : <Navigate to="/dashboard" />;
 };
 
 function App() {
@@ -37,6 +45,15 @@ function App() {
               <Route index element={<Navigate to="/dashboard" />} />
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="products" element={<Products />} />
+              <Route path="profile" element={<Profile />} />
+              <Route 
+                path="create-user" 
+                element={
+                  <SuperAdminRoute>
+                    <CreateUser />
+                  </SuperAdminRoute>
+                } 
+              />
             </Route>
           </Routes>
         </Router>
