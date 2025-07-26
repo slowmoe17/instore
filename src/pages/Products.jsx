@@ -491,6 +491,16 @@ export default function Products() {
                     borderBottom: '2px solid #667eea',
                   }}
                 >
+                  تاريخ الإنشاء
+                </TableCell>
+                <TableCell 
+                  align="center" 
+                  sx={{ 
+                    fontWeight: 'bold',
+                    color: '#1e293b',
+                    borderBottom: '2px solid #667eea',
+                  }}
+                >
                   الحالة
                 </TableCell>
                 <TableCell 
@@ -553,6 +563,11 @@ export default function Products() {
                         {product.addedBy?.name || 'غير محدد'}
                       </Typography>
                     </Box>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Typography variant="body2" sx={{ fontSize: '0.875rem', color: 'text.secondary' }}>
+                      {formatDate(product.createdAt)}
+                    </Typography>
                   </TableCell>
                   <TableCell align="center">
                     <Chip
